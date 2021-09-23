@@ -1,4 +1,9 @@
-# this is an object, key value pairs
+# Name: Sukky Yan
+# Assignment Week1
+
+
+# Assignment 1: Pick four objects in everyday life and represent them as a data type.
+
 myLaptop = {
     "name": "Macbook Pro", 
     "size": "large", 
@@ -24,14 +29,21 @@ myApartment = {
     "list-of-features": ["1", "2", "3"] 
 }
 
+# Assignment 2: Create an object and verify it using https://jsonlint.com/
+
+# Assignment 3: Create your own story algorithm. You can modify an example from class (story maker) or create your own. 
+# Remember to comment your code and use examples of: - user inputs - variables (int or float, string, boolean) - concatenation
 
 
-# let the user know what's going on
+
+
+# Welcome Messages
+print ("-----------------------------------")
 print ("Welcome to MadLibs!")
 print ("Answer the questions below to play.")
 print ("-----------------------------------")
 
-# variables containing all of your story info
+# Define variables
 year = input("Enter a year: ")
 name1 = input("What is your name?: ")
 length = input("Enter a length: ")
