@@ -1,10 +1,11 @@
-# DEEP DEEP FOREST
-# Now updated to Python 3
+# this is Sukky Yan Week 3 Homework
 
-# At the top of the file are declarations and variables we need.
-# 
-# Scroll to the bottom and look for the main() function, that is
-# where the program logic starts.
+# NEW YORK: BEING HUMAN
+
+# This is a story about you,a household CR-400 bionic robot lived in 2045. Today is your first day working for your master- Danniel and her cute daughter Alice.
+# Remember, making cautious decision. What you choose matters everyone's destiny.
+# Good luck.
+
 
 import random # random numbers (https://docs.python.org/3.3/library/random.html)
 import sys # system stuff for exiting (https://docs.python.org/3/library/sys.html)
