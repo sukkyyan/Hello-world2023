@@ -292,7 +292,7 @@ def findGun():
         
         print ("However, Danniel catches you are hiding something!")
         print ("Let's roll a dice to see if Danniel find your gun!")
-        input("press enter to roll >")
+        input("press enter to roll >") 
 
         difficulty = 3
         chanceRoll = rollDice(0,20,difficulty) # roll a dice between 0 and 20
