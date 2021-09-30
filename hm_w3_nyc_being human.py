@@ -1,6 +1,6 @@
 # this is Sukky Yan Week 3 Homework
 
-# NEW YORK: BECOME HUMAN
+# NEW YORK: BEING HUMAN
 
 # This is a story about you,a household CR-400 bionic robot lived in 2045. Today is your first day working for your master- Danniel and her cute daughter Alice.
 # Remember, making cautious decision. What you choose matters everyone's destiny.
@@ -13,7 +13,7 @@ import sys # system stuff for exiting (https://docs.python.org/3/library/sys.htm
 # an object describing our player
 player = { 
     "name": "p1", 
-    "humanity": 0,
+    "score": 0,
     "items" : ["milk"],
     "tasks" : [],
     "location" : "start"
@@ -41,16 +41,16 @@ def rollDice(minNum, maxNum, difficulty):
 def printGraphic(name):
     if (name == "gun"):
         print ('  +--^----------,--------,-----,--------^-,  ')
-        print ('  ||||||||   `--------'                     '')
-        print ('   `+---------------------------^----------  ')
-        print ('    `\_,---------,---------,--------------   ')
-        print ('      / XXXXXX /'        '                   ')
-        print ('     / XXXXXX /  `\    /                     ')
-        print ('    / XXXXXX /`-------'                       )
-        print ('   / XXXXXX /                                ')
-        print ('  / XXXXXX /_/                               ')
-        print (' (________(                                  ')
-        print ('                the gun                      ')
+        #print ('  ||||||||   `--------'     |              '')
+        #print ('   `+---------------------------^----------  ')
+        #print ('    `\_,---------,---------,--------------   ')
+        #print ('      / XXXXXX /'|       '                   ')
+        #print ('     / XXXXXX /  `\    /                     ')
+        #print ('    / XXXXXX /`-------'                       )
+        #print ('   / XXXXXX /                                ')
+        #print ('  / XXXXXX /_/                               ')
+        #print (' (________(                                  ')
+        #print ('                the gun                      ')
 
     if (name == "pasta"):
         print ('        |        ')
@@ -83,19 +83,19 @@ def printGraphic(name):
         print ('       / ,,, \         ')
         print ('      ( /6.6\ )        ')
         print ('      )(  _  )(        ')
-        print ('      ( ,' ', )        ')
-        print ('      / (\-/) \        ')
-        print ('     /_ /o o\ _\       ')
-        print ('     | _\ Y /_ |       ')
-        print ('     \(_ `~` _)/       ')
-        print ('      / /   \ \        ')
-        print ('     / ()/^\() \       ')
-        print ('    /. . . . . .\      ')
-        print ('     `"`"|`|`|"`"`     ')
-        print ('          |_|_|        ')
-        print ('         _|_|_|_       ')
-        print ('        (___|___)      ')
-        print ('  Alice talks to you   ')
+        #print ('      ( ,'-', )        ')
+        #print ('      / (\-/) \        ')
+        #print ('     /_ /o o\ _\       ')
+        #print ('     | _\ Y /_ |       ')
+        #print ('     \(_ `~` _)/       ')
+        #print ('      / /   \ \        ')
+        #print ('     / ()/^\() \       ')
+        #print ('    /. . . . . .\      ')
+        #print ('     `"`"|`|`|"`"`     ')
+        #print ('          |_|_|        ')
+        #print ('         _|_|_|_       ')
+        #print ('        (___|___)      ')
+        #print ('  Alice talks to you   ')
       
 
     if (name == "skull"):
@@ -138,7 +138,7 @@ def gameOver2():
     print("Alice screams and cries, looking at you desperately" )
     print("You don't know why you do this.... ")
     print("name: " + player["name"] ) # customized with a name
-    print( "humanity: " + str(player["humanity"]) ) # customized with a score
+    print( "score: " + str(player["score"]) ) # customized with a score
     return
 
 def gameOver1():
@@ -154,7 +154,7 @@ def gameOver1():
     print("However, Danniel beated you to death one day.")
     print("You were send back to the factory and memory reseted... ")
     print("name: " + player["name"] ) # customized with a name
-    print( "humanity: " + str(player["humanity"]) ) # customized with a score
+    print( "score: " + str(player["score"]) ) # customized with a score
     return
 
 def toBeContinued():
@@ -170,7 +170,7 @@ def toBeContinued():
     print("What will you and Alice to do in the next step?....")
     print("To be continued... ")
     print("name: " + player["name"] ) # customized with a name
-    print( "humanity: " + str(player["humanity"]) ) # customized with a score
+    print( "score: " + str(player["score"]) ) # customized with a score
     return
 
 
@@ -199,7 +199,6 @@ def cooking():
         print ("You hug Alice and resist Danniel’s attack with your body")
         print ("Danniel is irrated, he raises the baseball bat to hit you！")
         print ("Let's roll a dice to see what happens to you!")
-        player["humanity"] += 20
 
         pcmd = input(">") # user input
 
@@ -228,7 +227,7 @@ def cooking():
 
             elif (pcmd == "yes"):
                 print ("When Danniel was not paying attention, you escapes from the house with Alice!")
-                player["humanity"] += 60 # add to the score
+                player["score"] += 70 # add to the score
                 toBeContinued()
 
            
@@ -238,11 +237,10 @@ def cooking():
         print ("You pretend not to see it and go back to work")
         print ("Alice is crying on the background...") # bad choice reference
         cooking()
-        player["humanity"] -= 40
+        player["score"] -= 50
 
     elif (pcmd == "pull out the gun"):
          print ("You pull out the gun and shoot to the crazy drunk Danniel")
-         player["humanity"] += 80 # add to the score
          gameOver1()
         
 
@@ -261,7 +259,7 @@ def findGun():
     print ("Type: Italy Beretta 92F pistol.")
     print ("It seems familiar to you.....")
     input("press enter >")
-    player["humanity"] += 20
+    player["score"] += 50
     
     print ("You consider your options.")
 
@@ -288,7 +286,7 @@ def findGun():
         print ("-------------------------------")
         print ("You put the gun in your pocket quietly.")
         player["items"].append("gun") # add an item to the array with append
-        player["humanity"] += 50 # add to the score
+        player["score"] += 100 # add to the score
         
         print ("However, Danniel catches you are hiding something!")
         print ("Let's roll a dice to see if Danniel find your gun!")
@@ -302,7 +300,7 @@ def findGun():
             print ("Fortunetly! Danniel didn't find your gun and walked away angrily.")
             pcmd = input(">")
             housekeeping() # option again
-            player["humanity"] += 50
+            player["score"] += 50
         else:
             print ("Damn! Danneil found your gun！")
             gameOver1() # bad ending1
@@ -336,7 +334,7 @@ def housekeeping():
     if (pcmd == "company Alice"):
         # its a trick!
         print ("You want to play with Alice, but she walks away....")
-        player["humanity"] += 10
+        player["score"] += 10
 
         input("press enter >")
         housekeeping()
