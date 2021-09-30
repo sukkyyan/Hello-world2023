@@ -6,7 +6,7 @@
 # Remember, making cautious decisions. What you choose matters to everyone's destiny.
 # If you have come up with a happy or bad ending, try to go through another one.
 # There are three endings of this adventure, and you'll find the secret of WHO YOU ARE.
-
+# Good luck！
 
 import random # random numbers (https://docs.python.org/3.3/library/random.html)
 import sys # system stuff for exiting (https://docs.python.org/3/library/sys.html)
