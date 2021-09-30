@@ -2,17 +2,16 @@
 
 # NEW YORK: BECOME HUMAN
 
-# This is a story about you,a household CR-400 bionic robot lived in 2045. Today is your first day working for your master- Danniel and her cute daughter Alice.
-# Remember, making cautious decision. What you choose matters everyone's destiny.
+# This is a story about you, a household CR-400 bionic robot who lived in 2045. Today is your first day working for your master- Danniel and her cute daughter Alice.
+# Remember, making cautious decisions. What you choose matters to everyone's destiny.
 # If you have come up with a happy or bad ending, try to go through another one.
-# There are totally three endings of this adventure, and you'll fine the secert of WHO YOU ARE.
-# Good luck.
+# There are three endings of this adventure, and you'll find the secret of WHO YOU ARE.
 
 
 import random # random numbers (https://docs.python.org/3.3/library/random.html)
 import sys # system stuff for exiting (https://docs.python.org/3/library/sys.html)
 
-# an object describing our player
+# an object describing the player
 player = { 
     "name": "p1", 
     "humanity": 0,
@@ -55,49 +54,49 @@ def printGraphic(name):
         print ('                the gun                      ')
 
     if (name == "pasta"):
-        print ('        |        ')
-        print ('        |  /     ')
-        print ('        | /      ')
-        print ('   .~^(,&|/o.    ')
-        print ('  |`-------^|    ')
-        print ('  \         /    ')
-        print ('   `=======      ')
-        print ('   the pasta     ')
+        print ('                  |                  ')
+        print ('                  |  /               ')
+        print ('                  | /                ')
+        print ('             .~^(,&|/o.              ')
+        print ('            |`-------^|              ')
+        print ('            \         /              ')
+        print ('             `=======                ')
+        print ('             the pasta               ')
 
     if (name == "robot"):
-        print ('       _______          ')
-        print ('     _/       \_        ')
-        print ('    / |       | \       ')
-        print ('   /  |__   __|  \      ')
-        print ('  |__/((o| |o))\__|     ')
-        print ('  |      | |      |     ')
-        print ('  |\     |_|     /|     ')
-        print ('  | \           / |     ')
-        print ('   \| /  ___  \ |/      ')
-        print ('    \ | / _ \ | /       ')
-        print ('     \_________/        ')
-        print ('     _|_____|_          ')
-        print ('  ___|_________|___     ')
-        print ('  you are a bio-robot   ') # this one is escaped!
+        print ('                 _______                 ')
+        print ('               _/       \_               ')
+        print ('              / |       | \              ')
+        print ('             /  |__   __|  \             ')
+        print ('            |__/((o| |o))\__|            ')
+        print ('            |      | |      |            ')
+        print ('            |\     |_|     /|            ')
+        print ('            | \           / |            ')
+        print ('             \| /  ___  \ |/             ')
+        print ('              \ | / _ \ | /              ')
+        print ('               \_________/               ')
+        print ('               _|_____|_                 ')
+        print ('           ___|_________|___             ')
+        print ('           you are a bio-robot           ') # this ending is not defined a humanity score!
 
     if (name == "alice"):
-        print ('        .===.          ')
-        print ('       / ,,, \         ')
-        print ('      ( /6.6\ )        ')
-        print ('      )(  _  )(        ')
-        print ('      ( ,' ', )        ')
-        print ('      / (\-/) \        ')
-        print ('     /_ /o o\ _\       ')
-        print ('     | _\ Y /_ |       ')
-        print ('     \(_ `~` _)/       ')
-        print ('      / /   \ \        ')
-        print ('     / ()/^\() \       ')
-        print ('    /. . . . . .\      ')
-        print ('     `"`"|`|`|"`"`     ')
-        print ('         |_|_|         ')
-        print ('        _|_|_|_        ')
-        print ('       (___|___)       ')
-        print ('  Alice talks to you   ')
+        print ('                  .===.                    ')
+        print ('                 / ,,, \                   ')
+        print ('                ( /6.6\ )                  ')
+        print ('                )(  _  )(                  ')
+        print ('                ( ,' ', )                  ')
+        print ('                / (\-/) \                  ')
+        print ('               /_ /o o\ _\                 ')
+        print ('               | _\ Y /_ |                 ')
+        print ('               \(_ `~` _)/                 ')
+        print ('                / /   \ \                  ')
+        print ('               / ()/^\() \                 ')
+        print ('              /. . . . . .\                ')
+        print ('              `"`"|`|`|"`"`                ')
+        print ('                  |_|_|                    ')
+        print ('                 _|_|_|_                   ')
+        print ('                (___|___)                  ')
+        print ('        Alice finally talks to you         ')
       
 
     if (name == "skull"):
@@ -140,7 +139,7 @@ def gameOver2():
     print("Alice screams and cries, looking at you desperately" )
     print("You don't know why you do this.... ")
     print("name: " + player["name"] ) # customized with a name
-    print( "humanity: " + "?" ) # customized with a score
+    print( "humanity: " + "?" ) # customized with a score of humanity
     return
 
 def gameOver1():
@@ -294,7 +293,7 @@ def findGun():
         print ("Let's roll a dice to see if Danniel find your gun!")
         input("press enter to roll >") 
 
-        difficulty = 3
+        difficulty = 9
         chanceRoll = rollDice(0,20,difficulty) # roll a dice between 0 and 20
 
         # if the roll is higher than 50% chance
