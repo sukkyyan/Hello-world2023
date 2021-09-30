@@ -4,6 +4,8 @@
 
 # This is a story about you,a household CR-400 bionic robot lived in 2045. Today is your first day working for your master- Danniel and her cute daughter Alice.
 # Remember, making cautious decision. What you choose matters everyone's destiny.
+# If you have come up with a happy or bad ending, try to go through another one.
+# There are totally three endings of this adventure, and you'll fine the secert of WHO YOU ARE.
 # Good luck.
 
 
@@ -92,9 +94,9 @@ def printGraphic(name):
         print ('     / ()/^\() \       ')
         print ('    /. . . . . .\      ')
         print ('     `"`"|`|`|"`"`     ')
-        print ('          |_|_|        ')
-        print ('         _|_|_|_       ')
-        print ('        (___|___)      ')
+        print ('         |_|_|         ')
+        print ('        _|_|_|_        ')
+        print ('       (___|___)       ')
         print ('  Alice talks to you   ')
       
 
@@ -131,14 +133,14 @@ def printGraphic(name):
 
 
 def gameOver2():
-    printGraphic("skull")
+    printGraphic("robot")
     print("-------------------------------")
     print("Why this happens...")
     print("Danniel falls down into the pool of blood")
     print("Alice screams and cries, looking at you desperately" )
     print("You don't know why you do this.... ")
     print("name: " + player["name"] ) # customized with a name
-    print( "humanity: " + str(player["humanity"]) ) # customized with a score
+    print( "humanity: " + "?" ) # customized with a score
     return
 
 def gameOver1():
@@ -205,7 +207,7 @@ def cooking():
 
         # roll a dice from 0 to 20 to see what happens
         # if your number is higher than the difficulty, you win!
-        difficulty = 7
+        difficulty = 13
         roll = rollDice(0, 20, difficulty)
         
         # you have to get lucky! this only happens to the player
@@ -232,8 +234,6 @@ def cooking():
                 toBeContinued()
 
            
-    
-
     elif (pcmd == "ignore"):
         print ("You pretend not to see it and go back to work")
         print ("Alice is crying on the background...") # bad choice reference
@@ -243,7 +243,7 @@ def cooking():
     elif (pcmd == "pull out the gun"):
          print ("You pull out the gun and shoot to the crazy drunk Danniel")
          player["humanity"] += 80 # add to the score
-         gameOver1()
+         gameOver2()
         
 
 
@@ -267,7 +267,7 @@ def findGun():
 
 
     if (("gun" in player["items"]) and ("cooking" in player["tasks"])):
-        print ("Your options: [ company Alice, shoot Danniel, exit]")
+        print ("Your options: [ company Alice, pull out the gun, exit]")
 
     elif ("gun" in player["items"]):
         print ("Your options: [ company Alice, cooking, exit ]")
@@ -294,10 +294,10 @@ def findGun():
         print ("Let's roll a dice to see if Danniel find your gun!")
         input("press enter to roll >")
 
-        difficulty = 5
+        difficulty = 3
         chanceRoll = rollDice(0,20,difficulty) # roll a dice between 0 and 20
 
-        # if the roll is higher than 5... 75% chance
+        # if the roll is higher than 50% chance
         if (chanceRoll >= difficulty):
             print ("Fortunetly! Danniel didn't find your gun and walked away angrily.")
             pcmd = input(">")
@@ -322,7 +322,7 @@ def housekeeping():
     # 2. check the list of tasks, to see if you are in tasks list
 
     if (("gun" in player["items"]) and ("cooking" in player["tasks"])):
-        print ("Your options: [ company Alice, shoot Danniel, cooking, exit]")
+        print ("Your options: [ company Alice, pull out the gun, cooking, exit]")
 
     elif ("gun" in player["items"]):
         print ("Your options: [ company Alice, cooking, exit ]")
@@ -358,11 +358,12 @@ def housekeeping():
         print ("you quit.")
         return # exit the application
         
-    elif (pcmd == "shoot Danniel"):
+    elif (pcmd == "pull out the gun"):
         print ("With a gunshot, Danniel fell in a pool of blood, and Alice burst into tear...")
         printGraphic("skull")
 
         print ("why this happens...") # escaped
+        gameOver2()
         return # exit the application, secret ending
 
     else:
