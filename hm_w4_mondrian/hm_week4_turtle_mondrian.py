@@ -1,4 +1,4 @@
--# This is Suuky Yan Week 4 Assignment
+# This is Suuky Yan Week 4 Assignment
 
 # Part 1
 # <Disorder>
@@ -145,13 +145,13 @@ turtle_graphics.mainloop()
 
 
 
-# #  File: Mondrian.py
+# # #  File: Mondrian.py
 
-# #  Description: Will make random, abstract mondrian influenced art.
+# # #  Description: Will make random, abstract mondrian influenced art.
 
-# #  Student Name: Sukky Yan
+# # #  Student Name: Sukky Yan
 
-# #  Date Created:10-3-21
+# # #  Date Created:10-3-21
 
-# #  Date Last Modified:10-6-21
+# # #  Date Last Modified:10-6-21
 
