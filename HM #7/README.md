@@ -17,3 +17,4 @@
 
 # challenges:
 # We tracked face using the point of eyes and nose, so the position of hair is not perfect.
+# Also, it can't be centered but just the left up corner
